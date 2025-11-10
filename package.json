@@ -1,5 +1,6 @@
 {
   "name": "copeland-weather",
+  "homepage": "https://chuckerin.github.io/copeland-weather/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,14 +8,17 @@
     "dev": "vite",
     "test": "vitest",
     "test:coverage": "vitest --ui --coverage.enabled --coverage.all --coverage.src='./src --coverage.reporter='html'",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.2",
     "@types/redux-promise": "^0.5.32",
     "axios": "^1.13.1",
+    "gh-pages": "^6.3.0",
     "lodash": "^4.17.21",
     "node": "^25.1.0",
     "react": "^19.1.1",
